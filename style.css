@@ -2,11 +2,11 @@
 
 :root{
     /* colors */
-    --pale-blue: hsl(225, 100%, 94%);
     --bright-blue: hsl(245, 75%, 52%);
-    --very-pale-blue: hsl(225, 100%, 98%);
-    --desaturated-blue: hsl(224, 23%, 55%);
     --dark-blue: hsl(223, 47%, 23%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --pale-blue: hsl(225, 100%, 94%);
+    --very-pale-blue: hsl(225, 100%, 98%);
 
     /* fonts */
     --red-hat-display: 'Red Hat Display', sans-serif;
@@ -23,22 +23,22 @@ html {
 }
 
 .main-container {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
     background-color: var(--pale-blue);
     background-image: url("./images/pattern-background-mobile.svg");
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
 }
 
 .order-card {
+    background-color: #FFF;
     border-radius: 20px;
     width: 320px;
-    background-color: #FFF;
 }
 
 .order_card__img {
@@ -46,9 +46,9 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 100px;
     border-radius: 20px 20px 0 0;
+    height: 100px;
+    width: 100%;
 }
 
 .order_card_info {
@@ -57,26 +57,36 @@ html {
 }
 
 .info__title {
-    font-weight: 900;
     color: var(--dark-blue);
+    font-weight: 900;
     margin-top: 15px;
 }
 
 .info__paragraph {
-    margin: 20px 0;
     color: var(--desaturated-blue);
     line-height: 1.5rem;
+    margin: 20px 0;
 }
 
 .info__summary {
-    display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 100%;
-    height: 80px;
+    display: flex;
     background-color: var(--very-pale-blue);
     border-radius: 10px;
+    height: 80px;
+    justify-content: space-around;
     margin: 20px 0;
+    width: 100%;
+}
+
+.plan-box-left {
+    align-items: center;
+    display: flex;
+    text-align: left;
+}
+
+.plan-box-left div {
+    margin-left: 20px;
 }
 
 .summary__detail {
@@ -85,8 +95,8 @@ html {
 
 .summary__detail h2 {
     color: var(--dark-blue);
-    font-weight: 900;
     font-size: 1rem;
+    font-weight: 900;
 }
 
 .summary__detail span {
@@ -96,32 +106,36 @@ html {
 .summary__change {
     color: var(--bright-blue);
     font-weight: 700;
+}
+
+.summary__change:hover {
+    opacity: 0.7;
     text-decoration: none;
 }
 
 button {
-    border: none;
     background: none;
-    width: 100%;
+    border: none;
+    cursor: pointer;
     font-family: var(--red-hat-display);
     font-weight: 700;
-    cursor: pointer;
-    padding: 12px 24px;
     margin: 5px 0;
+    padding: 12px 24px;
+    width: 100%;
 }
 
 .button-primary {
     background-color: var(--bright-blue);
     border-radius: 10px;
-    color: #FFF;
     box-shadow: 1px 16px 8px 2px rgba(0, 0, 0, 0.11);
     -webkit-box-shadow: 1px 16px 8px 2px rgba(0, 0, 0, 0.11);
     -moz-box-shadow: 1px 16px 8px 2px rgba(0, 0, 0, 0.11);
+    color: #FFF;
     transition: all 250ms ease;
 }
 
 .button-primary:hover {
-    transform: translate(-1px, -1px);
+    opacity: 0.7;
 }
 .button-primary:active {
     transform: translate(1px, 1px);
@@ -133,7 +147,7 @@ button {
 }
 
 .button-secondary:hover {
-    text-decoration: underline;
+    color: var(--dark-blue);
 }
 
 .shadow {
@@ -151,9 +165,9 @@ button {
     }
 
     .order-card {
+        background-color: #FFF;
         border-radius: 20px;
         width: 400px;
-        background-color: #FFF;
     }
 
     .order_card__info {
